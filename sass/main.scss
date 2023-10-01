@@ -1,0 +1,391 @@
+$primary: #5265E1;
+$danger: #FA5959;
+$fuente: quote(Arial);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+* {
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: $fuente ;
+}
+
+// Barra de navegacion
+
+nav {
+
+    background-color: white;
+
+    @include media-breakpoint-down(md) {
+        margin-bottom: 6%;
+    }
+
+    ul {
+        font-size: .8rem;
+    }
+
+    .offcanvas {
+
+        @include media-breakpoint-up(md) {
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            padding-right: 4%;
+        }
+    }
+
+    .offcanvas-body {
+
+        @include media-breakpoint-up(md) {
+            background-color: white !important;
+            flex-direction: row !important;
+            justify-content: space-between !important;
+        }
+
+    }
+
+    .navbar-brand {
+        padding-left: 6%;
+
+    }
+
+    .btn {
+        font-size: .8rem;
+    }
+
+    .icono-cierre {
+        width: 120%;
+        margin-top: -10px;
+    }
+
+    .nav-link {
+        transition: all 0.2s ease-in;
+
+        &:hover {
+            color: $danger;
+        }
+
+        @include media-breakpoint-down(md) {
+            color: white;
+            font-size: 1.2rem;
+        }
+
+    }
+
+    .boton-login {
+        transition: all 0.2s ease-in-out;
+        color: white;
+        border-radius: 4px;
+
+        &:hover {
+            color: $danger;
+            background-color: white;
+        }
+
+        @include media-breakpoint-down(md) {
+            border: 2px solid white;
+            background-color: transparent;
+            margin-top: 3%;
+            width: 100%;
+            padding: 3%;
+            font-size: 1.2rem;
+
+        }
+    }
+}
+
+// Seccion Hero
+
+main {
+    h1 {
+        font-size: 3rem;
+
+        @include media-breakpoint-down(md) {
+            text-align: center;
+            font-size: 2.2rem;
+        }
+    }
+
+    .texto {
+        color: rgb(172, 170, 170);
+
+        @include media-breakpoint-down(md) {
+            margin-top: 8%;
+            margin-bottom: 10%;
+        }
+    }
+
+
+    .box-1 {
+        padding-left: 7%;
+
+        @include media-breakpoint-down(md) {
+            text-align: center;
+            padding: 8%;
+        }
+
+        .boton-one {
+            transition: all 0.2s ease-in;
+
+            &:hover {
+                background-color: white;
+                color: $primary;
+            }
+
+            @include media-breakpoint-down(md) {
+                font-size: 1.2rem;
+            }
+        }
+
+        .boton-two {
+            transition: all 0.2s ease-in;
+
+            &:hover {
+                border: 1px solid black;
+            }
+
+            @include media-breakpoint-down(md) {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .back-azul {
+        top: 20%;
+        left: 20%;
+        z-index: -1;
+        border-radius: 50% 0 0 50%;
+    }
+}
+
+// Tabs
+
+.menu-tabs {
+
+    button {
+        color: rgb(172, 170, 170);
+        border-bottom: 1px solid rgb(172, 170, 170) !important;
+
+        &:hover {
+            color: #FA5959;
+        }
+
+        &:focus {
+            color: black;
+            border-bottom: 4px solid $danger !important;
+        }
+
+        @include media-breakpoint-down(md) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .nav {
+        @include media-breakpoint-down(md) {
+            display: flex;
+            flex-direction: column;
+            font-size: 1.3rem;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+        }
+    }
+}
+
+// Sección Bookmark in one click
+
+.contenido-2 {
+
+    .texto-2 {
+        color: rgb(172, 170, 170);
+
+        @include media-breakpoint-down(md) {
+            margin-top: 8%;
+            margin-bottom: 10%;
+        }
+    }
+
+    .box-2 {
+
+        @include media-breakpoint-down(md) {
+            text-align: center;
+            padding: 8%;
+            margin-top: 16% !important;
+        }
+
+        .boton-one {
+            transition: all 0.2s ease-in;
+
+            &:hover {
+                background-color: white;
+                color: $primary;
+            }
+
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+        }
+    }
+
+    .back-azul3 {
+        top: 30%;
+        right: 25%;
+        overflow: hidden;
+        z-index: -1;
+        border-radius: 0 50% 50% 0;
+    }
+}
+
+
+// Cards
+
+.cards {
+
+    .boton-card1,
+    .boton-card2,
+    .boton-card3 {
+        transition: all 0.2s ease-in;
+
+        &:hover {
+            background-color: white;
+            color: $primary;
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+// Accordion boton
+
+.accordion-seccion {
+
+    .accordion-button {
+        background-color: white;
+
+        &:hover {
+            background-color: white;
+            color: #FA5959;
+        }
+
+        &:focus {
+            box-shadow: none;
+            color: black;
+        }
+
+    }
+
+    .boton-accordion {
+        transition: all 0.2s ease-in;
+
+        &:hover {
+            background-color: white;
+            color: $primary;
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+// Footer
+
+footer {
+
+    .formulario {
+
+        @include media-breakpoint-up(md) {
+            flex-direction: row !important;
+            justify-content: space-between;
+        }
+       
+        .form-control {
+            height: 3.5rem;
+            border-radius: 4px;
+            // font-size: 1.4rem!important;
+        
+            &::placeholder {
+                color: rgb(208, 208, 208);
+            }
+
+            &:hover {
+                border: 2px solid $danger;
+            }
+
+            @include media-breakpoint-up(md) {
+                width: 65%;
+                height: 3.5rem;
+            }
+        }
+
+        // .invalid-tooltip {
+        //     font-weight: bold;
+        //     margin-top: -2rem;
+        // }
+
+        button {
+            height: 3.5rem;
+            border-radius: 4px;
+
+            &:hover {
+                background-color: white;
+                color: $danger !important;
+            }
+        }
+    }
+
+    // Footer nav
+
+    .footer-nav {
+
+        background-color: rgb(13, 15, 45);
+
+        .logo-white {
+            width: 14rem;
+        }
+
+        a {
+            text-decoration: none;
+            transition: all 0.2s ease-in;
+
+            &:hover {
+                color: $danger !important;
+            }
+        }
+
+        @include media-breakpoint-up(md) {
+
+            .box-general {
+                padding: 0 !important;
+            }
+
+            .logo-white {
+                width: 9rem;
+                margin-top: 3%;
+            }
+
+            a {
+                font-size: .9rem;
+            }
+
+            .box-enlaces {
+                flex-direction: row !important;
+                align-items: center;
+            }
+
+            .rrss {
+                padding-left: 20% !important;
+            }
+        }
+    }
+}
